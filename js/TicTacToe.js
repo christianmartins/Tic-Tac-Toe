@@ -6,6 +6,7 @@ $(document).ready(function(){
 	$("#jogadorAtual").html("Jogador atual: "+ "X");
 
 		$(".grid").click(function(){
+			if(!jaAcabou){
 				if(rodadaAtual <= 9){
 					if(grid[this.id - 1] == undefined){
 						var jogadorAtual = rodadaAtual % 2 == 1? "X" : "O";
@@ -23,6 +24,10 @@ $(document).ready(function(){
 					$("#jogadorAtual").html("Fim de jogo");	
 					alert("Fim de jogo");
 				}
+			}
+			else{
+				alert("Resete o jogo");
+			}
 		});
 });
 
@@ -31,20 +36,25 @@ function vencer(jogadorAtual){
 	var jogadorAtual;
 	if(grid[0] == jogadorAtual && grid[1] == jogadorAtual && grid[2] == jogadorAtual){
 		alert(jogadorAtual+ " - venceu essa partida");
+		jaAcabou = true;
 	}
 	if(grid[3] == jogadorAtual && grid[4] == jogadorAtual && grid[5] == jogadorAtual){
 		alert(jogadorAtual+ " - venceu essa partida");
+		jaAcabou = true;
 	}
 	if(grid[6] == jogadorAtual && grid[7] == jogadorAtual && grid[8] == jogadorAtual){
 		alert(jogadorAtual+ " - venceu essa partida");
+		jaAcabou = true;
 	}
 
 
 	if(grid[0] == jogadorAtual && grid[3] == jogadorAtual && grid[6] == jogadorAtual){
 		alert(jogadorAtual+ " - venceu essa partida");
+		jaAcabou = true;
 	}
 	if(grid[1] == jogadorAtual && grid[4] == jogadorAtual && grid[7] == jogadorAtual){
 		alert(jogadorAtual+ " - venceu essa partida");
+		jaAcabou = true;
 	}
 	if(grid[2] == jogadorAtual && grid[5] == jogadorAtual && grid[8] == jogadorAtual){
 		alert(jogadorAtual+ " - venceu essa partida");
@@ -52,9 +62,11 @@ function vencer(jogadorAtual){
 
 	if(grid[0] == jogadorAtual && grid[4] == jogadorAtual && grid[8] == jogadorAtual){
 		alert(jogadorAtual+ " - venceu essa partida");
+		jaAcabou = true;
 	}
 	if(grid[2] == jogadorAtual && grid[4] == jogadorAtual && grid[6] == jogadorAtual){
 		alert(jogadorAtual+ " - venceu essa partida");
+		jaAcabou = true;
 	}
 }
 
