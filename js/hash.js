@@ -1,0 +1,33 @@
+var grid = new Array(9);
+$(document).ready(function(){
+	$("#1").click(function(){
+		$("#1").html("x");
+	});
+	$("#2").click(function(){
+		$("#2").html("x");
+	});
+	$("#3").click(function(){
+		$("#3").html("x");
+	});
+	$("#3").click(function(){
+		$("#3").html("x");
+	});
+	$("#4").click(function(){
+		$("#4").html("x");
+	});
+	$("#5").click(function(){
+		$("#5").html("x");
+	});
+	$("#6").click(function(){
+		$("#6").html("x");
+	});
+	$("#7").click(function(){
+		$("#7").html("x");
+	});
+	$("#8").click(function(){
+		$("#8").html("x");
+	});
+	$("#9").click(function(){
+		$("#9").html("x");
+	});
+});
