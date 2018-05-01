@@ -20,8 +20,8 @@ $(document).ready(function(){
 					}
 				}
 				if(rodadaAtual > 9){
-					$("#jogadorAtual").html("Empate");	
-					alert("Empate");
+					$("#jogadorAtual").html("Fim de jogo");	
+					alert("Fim de jogo");
 				}
 		});
 });
@@ -56,4 +56,8 @@ function vencer(jogadorAtual){
 	if(grid[2] == jogadorAtual && grid[4] == jogadorAtual && grid[6] == jogadorAtual){
 		alert(jogadorAtual+ " - venceu essa partida");
 	}
+}
+
+function resetarJogo(){
+	window.location.reload();
 }
