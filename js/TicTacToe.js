@@ -3,7 +3,7 @@ var maximoDeRodadas = 9;
 var rodadaAtual = 1;
 var jaAcabou = false;
 $(document).ready(function(){
-	$("#jogadorAtual").html(rodadaAtual % 2 == 1? "	X" : " O");
+	$("#jogadorAtual").html("Jogador atual: "+ (rodadaAtual % 2 == 1? "X" : "O"));
 
 	$(".grid").click(function(){
 
@@ -14,7 +14,7 @@ $(document).ready(function(){
 					grid[this.id - 1] = jogadorAtual;
 					$(this).html(jogadorAtual);
 					rodadaAtual++;
-					$("#jogadorAtual").html(rodadaAtual % 2 == 1? " X" : " O");		
+					$("#jogadorAtual").html("Jogador atual: "+ (rodadaAtual % 2 == 1? "X" : "O"));		
 				}
 				else{
 					alert("Posição ja ocupada");
@@ -25,8 +25,7 @@ $(document).ready(function(){
 				jaAcabou = true;
 			}
 		}
-		else{
-			
+		else{	
 			alert("Jogo acabou");
 		}	
 	});
